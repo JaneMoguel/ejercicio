@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "94146b71-fe7b-4d42-87fc-ac1f4c30bba4",
+		"name": "pruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Juan Osorio\",\r\n        \"genero\": \"masculino\",\r\n        \"edad\": 27,\r\n        \"identificacion\": \"ine\",\r\n        \"direccion\": \"13 junio y equinoccial\",\r\n        \"telefono\": \"098874587\",\r\n        \"contraseña\": \"1245\",\r\n        \"estado\": \"true\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/clientes/crear/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"clientes",
+						"crear",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/clientes/obtener/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"clientes",
+						"obtener",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/clientes/obtener/cliente/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"clientes",
+						"obtener",
+						"cliente",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idPersona\":1,\r\n        \"idCliente\":1        \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/clientes/borrar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"clientes",
+						"borrar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente borrar Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idPersona\":1,\r\n        \"idCliente\":1        \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/clientes/borrar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"clientes",
+						"borrar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \r\n        \"idPersona\": 3,\r\n        \"idCliente\": 3,\r\n        \"nombre\": \"Juan Osorio\",\r\n        \"genero\": \"masculino\",\r\n        \"edad\": 27,\r\n        \"identificacion\": \"INE\",\r\n        \"direccion\": \"13 junio y equinoccial\",\r\n        \"telefono\": \"098874587\",\r\n        \"contraseña\": \"1245\",\r\n        \"estado\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/clientes/actualizar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"clientes",
+						"actualizar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuentas crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \r\n        \"idcliente\": 1,\r\n        \"numero\": \"585545\",\r\n        \"tipo\": \"Corriente\",\r\n        \"saldo\": 1000,\r\n        \"estado\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/cuentas/crear/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"cuentas",
+						"crear",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener cuentas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idcliente\": 3,\r\n        \"numero\": \"478758\",\r\n        \"tipo\": \"ahorro\",\r\n        \"saldo\": 2000,\r\n        \"estado\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/cuentas/obtener/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"cuentas",
+						"obtener",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener cuenta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/cuentas/obtener/cuenta/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"cuentas",
+						"obtener",
+						"cuenta",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuenta actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idcuenta\": 2,\r\n    \"numero\": \"478758\",\r\n    \"tipo\": \"ahorro\",\r\n    \"saldo\": 2001.0,\r\n    \"estado\": 1,\r\n    \"cliente\": {\r\n        \"idcliente\": 3,\r\n        \"contraseña\": \"1245\",\r\n        \"estado\": \"true\",\r\n        \"persona\": {\r\n            \"idpersona\": 3,\r\n            \"nombre\": \"Juan Osorio\",\r\n            \"genero\": \"1245\",\r\n            \"edad\": 27,\r\n            \"identificacion\": \"INE\",\r\n            \"direccion\": \"13 junio y equinoccial\",\r\n            \"telefono\": \"098874587\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/cuentas/actualizar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"cuentas",
+						"actualizar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuenta borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idCuenta\":1        \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/cuentas/borrar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"cuentas",
+						"borrar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movimiento crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \r\n        \"idcuenta\": 2,\r\n        \"fecha\": \"2022-07-24\",\r\n        \"tipo\": \"Ahorro\",\r\n        \"saldo\": 2000,\r\n        \"valor\": 525\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/movimientos/crear/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"movimientos",
+						"crear",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener movimientos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idcliente\": 3,\r\n        \"numero\": \"478758\",\r\n        \"tipo\": \"ahorro\",\r\n        \"saldo\": 2000,\r\n        \"estado\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/movimientos/obtener/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"movimientos",
+						"obtener",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener movimientos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/movimientos/obtener/movimiento/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"movimientos",
+						"obtener",
+						"movimiento",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movimientos actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idmovimiento\": 1,\r\n    \"fecha\": \"2022-07-23\",\r\n    \"tipo\": \"Ahorro\",\r\n    \"saldo\": 2000.0,\r\n    \"valor\": 526.0,\r\n    \"cuenta\": {\r\n        \"idcuenta\": 2,\r\n        \"numero\": \"478758\",\r\n        \"tipo\": \"ahorro\",\r\n        \"saldo\": 2001.0,\r\n        \"estado\": 1,\r\n        \"cliente\": {\r\n            \"idcliente\": 3,\r\n            \"contraseña\": \"1245\",\r\n            \"estado\": \"true\",\r\n            \"persona\": {\r\n                \"idpersona\": 3,\r\n                \"nombre\": \"Juan Osorio\",\r\n                \"genero\": \"1245\",\r\n                \"edad\": 27,\r\n                \"identificacion\": \"INE\",\r\n                \"direccion\": \"13 junio y equinoccial\",\r\n                \"telefono\": \"098874587\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/movimientos/actualizar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"movimientos",
+						"actualizar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movimientos borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idmovimiento\":1        \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/movimientos/borrar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"movimientos",
+						"borrar",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
